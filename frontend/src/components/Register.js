@@ -10,8 +10,6 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      // Example of basic registration logic
-      // Replace with your actual registration logic
       const response = await fetch('http://localhost:5000/register', {
         method: 'POST',
         headers: {
@@ -21,15 +19,11 @@ const Register = () => {
       });
 
       if (response.ok) {
-        // Redirect to login page after successful registration
-        window.location.href = '/login'; // Example of redirection using window.location
-        // Alternatively, use <Link to="/login"> in the render return
+        window.location.href = '/login'; 
       } else {
-        // Handle registration error, show error message, etc.
         console.error('Registration failed');
       }
     } catch (error) {
-      // Handle fetch or other errors
       console.error('Error during registration:', error);
     }
   };
