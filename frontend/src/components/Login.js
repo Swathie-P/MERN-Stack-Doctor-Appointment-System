@@ -9,8 +9,6 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      // Example of basic authentication logic
-      // Replace with your actual authentication logic
       const response = await fetch('http://your-api-url/login', {
         method: 'POST',
         headers: {
@@ -20,15 +18,11 @@ const Login = () => {
       });
 
       if (response.ok) {
-        // Redirect to dashboard or any other route after successful login
-        window.location.href = '/dashboard'; // Example of redirection using window.location
-        // Alternatively, use <Link to="/dashboard"> in the render return
+        window.location.href = '/dashboard'; 
       } else {
-        // Handle login error, show error message, etc.
         console.error('Login failed');
       }
     } catch (error) {
-      // Handle fetch or other errors
       console.error('Error during login:', error);
     }
   };
